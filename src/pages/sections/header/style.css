@@ -1,0 +1,10 @@
+.header-main{
+  position: absolut;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.cont-intro{
+ min-height: 25rem; 
+ position: relative;
+}

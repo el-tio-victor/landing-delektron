@@ -1,0 +1,12 @@
+.title2,.title{
+  font-size: 5rem;
+  font-weight: 700;
+}
+.title{
+  width: 30px;
+  word-wrap: break-word;
+  line-height: 70px;
+}
+.title2{
+  letter-spacing: 15px;
+}

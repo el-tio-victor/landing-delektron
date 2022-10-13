@@ -1,0 +1,55 @@
+.anim-out{
+  animation: efect-out  .6s forwards ease-in-out;
+  /*transform: translateY(-220px);*/
+  transition: height .7s ease-out;
+}
+#wave{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+@keyframes efect-out{
+  /*0%,10%,25%,26%,32%{
+    height: 95vh;
+  }*/
+  100%{
+    height: 0vh;
+  }
+}
+#group_electronica_industrial{
+    opacity:0;
+}
+#group_electronica_industrial.group-show{
+  animation: anim 1s forwards;
+  transform: translateY(10px);
+}
+#symbol-2{
+  animation-delay: 1s;
+}
+#symbol-3{
+  animation-delay: .5s;
+}
+#symbol-4{
+  animation-delay: .25s;
+}
+.symbols{
+  animation: floating 3s infinite ease-out;
+}
+@keyframes anim{
+  98%{
+    opacity:.5;
+  }
+  100%{
+    transform: translateY(0);
+    opacity:1;
+  }
+
+}
+
+@keyframes floating{
+  from{ opacity: .3; }
+  65%{ opacity: .6; }
+  to{ opacity: .1; }
+}
