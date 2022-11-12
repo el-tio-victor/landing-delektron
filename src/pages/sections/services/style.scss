@@ -1,0 +1,51 @@
+.cont-services{
+  color: #4d4949;
+  position: relative;
+  background: rgb(242,242,242);
+  background: linear-gradient(0deg, rgba(242,242,242,1) 52%, rgba(252,248,248,1) 80%, rgba(255,255,255,1) 100%);
+  .wrapper-services{
+    z-index: 2;
+  }
+  .all-service-item{
+    border-bottom: solid 4px #ccc!important;
+  }
+}
+.item-service-title{
+  min-height: 70px;
+  font-weight: 700;
+}
+.wrapper-catalogo-equipos{
+  padding: 3rem 0;
+}
+
+.grid-services{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 24px;
+}
+.grid-services  >  div{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+  .grid-service-item-title{
+    font-size: 3rem;
+    color:#ccc;
+  }
+
+.grid-services div:nth-child(2n){
+  transform: translate(5px, 33px);
+}
+
+.all-service-wrapper{
+  margin-top: 7rem;
+  & >.all-service-item:nth-child(2){
+    height: 320px;
+    margin-top: -3rem;
+  }
+}
+.item-otros{
+  font-size: 1.78rem;
+  padding: .35rem;
+}

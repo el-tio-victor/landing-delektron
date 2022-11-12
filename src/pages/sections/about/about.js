@@ -6,34 +6,40 @@ import "./style.css";
 const About = ()=> {
   return(
     <div>
-      <section id="about" className="cont-about">
-        <header className="ps-3">
-        <h2 className="title">
+      <section id="about" className="position-relative
+      pt-5 bg-white pb-5 cont-about">
+        <header className="ps-3 pt-5  ">
+        <h2 className="mt-3 title">
           NUESTRA 
         </h2>
-        &nbsp;
-        <h2 className="title2">EMPRESA</h2>
+        <h2 className="ps-3 title2">EMPRESA</h2>
         </header>
         <div className=" body-about pt-5 pb-5">
-          <Container>
+          <Container className="col-12 col-md-9 container-text-about">
           <p>
-            Somos una empresa poblana dedicana al mantenimiento y 
-            reparación de diversos tipos de equipo electónico 
-            industrial, mantenimiento preventivo y coorectivo ademas de 
-            servicios de asistencia técnica y proyectos 
+            Somos un equipo de profesionales electrónicos con base en la ciudad 
+            de puebla y servicio a todo mexico,  
+            comprometidos con el mantenimiento y 
+            la reparación de diversos tipos de equipo electrónico 
+            industrial, mantenimiento preventivo y correctivo, ademas de servicios de asistencia técnica y proyectos 
             de automatización. 
           </p>
           </Container>
-          <Container>
+          <Container className="position-relative">
+            <div className="banner-about">
+            </div>
             <div className="d-flex justify-content-end">
-              <p className="col-6">
+              <p className="pe-5 col-6 text-compromise">
                Nuestro compromiso es con cada uno de nuestros 
-                clientes para brindar la mayor calidad en el servicio
-                de sus equipos.
+                clientes para brindar la mayor calidad en los
+                servicio brindados a sus equipos.
               </p>
             </div>
           </Container>
         </div>
+        <h5 className="position-relative text-center thanks">
+            A cada uno de ellos gracias por su confianza
+        </h5>
       </section>
     </div>
   );

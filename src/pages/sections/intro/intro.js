@@ -14,7 +14,8 @@ import "./style.scss";
 const container_intro ={
   position: "relative",
   backgroundColor: "#3a86ff",
-  height: "100vh"
+  height: "100vh",
+  overflow: 'hidden',
 }
 
 let SnapJs = () => {
