@@ -128,7 +128,7 @@ const control_scroll = useRef();
         </div>
       </header>
        <StyledBackgroundImage
-      Tag="div"
+     Tag="div"
        id="bg-header-intro"
       fluid={imageData}
     />
