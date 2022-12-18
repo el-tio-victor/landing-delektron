@@ -21,6 +21,23 @@ module.exports = {
         name: 'images',
         path: path.join(__dirname,'src','images'),
       },
+    },
+    {
+      resolve: "gatsby-omni-font-loader",
+      options: {
+        enableListener: true,
+        preconnect:  [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Arvo`,
+            file:  `https://fonts.googleapis.com/css2?family=Arvo&display=swap`,
+          },
+          {
+            name: `Dosis`,
+            file:  `https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap`,
+          },
+        ],
+      }
     }
-  ]
+  ] 
 };

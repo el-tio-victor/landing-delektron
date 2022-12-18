@@ -7,6 +7,7 @@
     z-index: 2;
   }
   .all-service-item{
+    margin: 0 .8rem;
     border-bottom: solid 4px #ccc!important;
   }
 }
@@ -48,4 +49,10 @@
 .item-otros{
   font-size: 1.78rem;
   padding: .35rem;
+}
+.wrapper-clientes{
+  svg{
+    width: 190px;
+    height: 210px;
+  }
 }

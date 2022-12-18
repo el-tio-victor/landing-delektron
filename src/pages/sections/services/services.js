@@ -4,6 +4,14 @@ import CatalogoEquipos from "./CatalogoEquipos";
 import {graphql, useStaticQuery} from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import styled from "styled-components";
+import BentelerLogo from 
+"../../../images/benteler.svg";
+import SimecLogo from 
+"../../../images/simec.svg";
+import MotzoLogo from 
+"../../../images/motzo.svg";
+import MondelezLogo from 
+"../../../images/mondelez.svg";
 
 import "./style.scss"
 
@@ -98,6 +106,17 @@ const Services = ()=>{
         >
           <CatalogoEquipos/>
         </Container>
+      </div>
+      <div className=" m-auto">
+        <Container>
+        <p>Gracias a nuestros clientes por su confianza...</p>
+        </Container>
+        <div className="d-flex justify-content-around wrapper-clientes">
+          <BentelerLogo/>
+          <MondelezLogo/>
+          <MotzoLogo/>
+          <SimecLogo/>
+        </div>
       </div>
     </section>
   );

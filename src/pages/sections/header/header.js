@@ -61,7 +61,9 @@ const control_scroll = useRef();
   const observable = new  ResizeObserver(
     (entries)=>{
       let y = control_scroll.current.getBoundingClientRect().top;
+      console.log('y',y)
       if(y == 0){
+        alert()
         control_scroll.current.querySelector('.header-main').classList.add('show')
         control_scroll.current.querySelector('#bg-header-intro').classList.add('show')
       }

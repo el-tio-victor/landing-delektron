@@ -61,7 +61,7 @@ const CatalogoEquipos = ()=>{
         <h4 className="grid-service-item-title">
           Otros...
         </h4>
-        <div className="wrapper-items-otros d-flex">
+        <div className="p-4 wrapper-items-otros d-flex">
           <h5 className="item-otros"> Balastros electrónicos</h5>
           <h5 className="item-otros">Equipo para instrumentación</h5>
           <h5 className="item-otros">Control de puertas</h5>
@@ -69,11 +69,14 @@ const CatalogoEquipos = ()=>{
           <h5 className="item-otros">Displays</h5>
         </div>
       </div>
-      <p className="pt-5 pb-5">Y mas... 
-        <br />
-        Ademas contamos con un amplio stock en refacciones y proveedores
-        nacionales e internacionales para poder brindarle una respuesta en menor tiempo.
-      </p>
+      <div className="col-10 m-auto">
+        <p className="pt-5 pb-5 ps-4 me-4">Y mas... 
+          <br />
+          Ademas contamos con un amplio stock en refacciones y proveedores
+          nacionales e internacionales para poder brindarle una respuesta en 
+          menor tiempo.
+        </p>
+      </div>
     </div>
 
   );

@@ -8,7 +8,7 @@ const About = ()=> {
     <div>
       <section id="about" className="position-relative
       pt-5 bg-white pb-5 cont-about">
-        <header className="ps-3 pt-5  ">
+        <header className=" container ps-3 pt-5  ">
         <h2 className="mt-3 title">
           NUESTRA 
         </h2>
