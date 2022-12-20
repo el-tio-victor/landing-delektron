@@ -1,0 +1,17 @@
+.header-mai{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  font-size: 1.25rem;
+  font-family: "Dosis";
+  font-weight: 100;
+  background: rgba(255,255,255,1);
+  svg{
+    width: 110px;
+    height: 28px
+  }
+  .wrapper-header{
+    border-bottom: 2px solid rgba(255,255,255,.1);
+  }
+}

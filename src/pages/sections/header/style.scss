@@ -18,6 +18,16 @@ h1{
 .cont-intro{
  min-height: 100vh; 
  position: relative;
+ overflow: hidden;
+ border: 8px solid white;
+ svg{
+   position:absolute;
+   bottom:-16px;
+   right: -5px;
+   path{
+     fill: white!important;
+   }
+ }
 }
 .bg-header{
   position: absolute;
@@ -29,6 +39,7 @@ h1{
 .row-intro{
   width: 320px;
   border-right: solid 4px white;
+  margin-bottom: 250px!important;
 }
 #bg-header-intro.show,.show{
   transition: all .8s ease-in-out;

@@ -4,6 +4,7 @@ import './general-style.css';
 
 import {Link} from "react-scroll";
 import Row from 'react-bootstrap/Row';
+import Nav from "./sections/nav/nav";
 import HeaderPage from "./sections/header/header";
 import About from "./sections/about/about";
 import Services from "./sections/services/services";
@@ -18,7 +19,7 @@ const IndexPage = () => {
     <div>
       <SnapJs></SnapJs>
     <main style={pageStyles}>
-      <p>Inicionosotros</p>
+      <Nav/>
       <HeaderPage/>
       <About/>
       <Services/>
