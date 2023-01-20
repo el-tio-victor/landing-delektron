@@ -1,6 +1,6 @@
 import * as React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './general-style.css';
+import './general-style.scss';
 
 import {Link} from "react-scroll";
 import Row from 'react-bootstrap/Row';

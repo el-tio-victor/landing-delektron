@@ -1,0 +1,73 @@
+@mixin areas($var1,$var2) {
+ grid-template-areas: $var1
+ $var2; 
+}
+/*.title2,.title{
+  font-size: 5rem;
+  font-weight: 700;
+}
+.title{
+  width: 30px;
+  word-wrap: break-word;
+  line-height: 70px;
+}
+.title2{
+  letter-spacing: 15px;
+}*/
+.cont-about{
+  z-index: 1;
+  min-height: 1140px;
+  padding-bottom: 7rem;
+  .container-about-wrapper{
+    border: 9px solid #42679b;
+    padding: 25px;
+  }
+  .cont-about-wrapper{
+    margin-bottom: 4rem ;
+    display: grid;
+    grid-template-columns: 550px 1fr ;
+    grid-template-rows: 650px 120px;
+
+    @include areas("imagen texto","gracias gracias");
+    .grid-area-imagen{
+      grid-area: imagen;
+    }
+    .grid-area-texto{
+      grid-area: texto;
+    }
+    .grid-area-gracias{
+      grid-area: gracias;
+    }
+  }
+}
+.container-text-about{
+  margin-bottom: 3rem;
+}
+.body-about p{
+  font-size: 1.234rem;
+}
+.thanks{
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px #3a86ff;
+  z-index: 4;
+}
+.cont-banner{
+  min-height: 670px;
+  background-color: #ccc;
+}
+.banner-about{
+  position: absolute;
+  left: 70px;
+  top: 20px;
+  background-color: #3a86ff;
+  width: 420px;
+  height: 490px;
+  z-index: 3;
+}
+.text-compromise{
+  padding-top: 10rem;
+  width: 380px;
+  color: #3a86ff;
+}

@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass","snapsvg-cjs","gatsby-plugin-styled-components",
     "gatsby-background-image",`gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
+    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

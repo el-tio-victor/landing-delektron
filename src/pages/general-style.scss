@@ -1,0 +1,35 @@
+// Example usage
+@mixin gradientText($color1, $color2, $dir) {
+    background: linear-gradient($color1, $color2, $dir);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body,html{
+  font-family: "Arvo";
+}
+h1,h2,h3{
+  font-family: "Dosis";
+  font-weight: 700 ;
+  color: #3a86ff;
+}
+a{
+  text-decoration: none;
+}
+p{
+
+  font-size: 1.234rem;
+}
+
+.title,.title2{
+  font-family: "Dosis"!important;
+  font:caption;
+  text-shadow: 5px 5px 0 rgba(102,180,213,.35);
+  font-size: 5.78vw;
+  font-weight: 900;
+  .title-text{
+    /*font: caption;
+    text-shadow: 5px 5px 0px rgba(0,0,0,.01);*/
+    @include gradientText(90deg,#344883,#71a9bf)
+  }
+}
+

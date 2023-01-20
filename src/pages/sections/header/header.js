@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import { graphql, useStaticQuery } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 import styled from "styled-components";
+
 import Weave from "../../../images/weave-intro.svg";
 
 import "./style.scss";

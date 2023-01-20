@@ -1,8 +1,11 @@
 import * as React from "react";
 import Container from "react-bootstrap/Container";
 import CatalogoEquipos from "./CatalogoEquipos";
-import {graphql, useStaticQuery} from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import { graphql, useStaticQuery } from "gatsby";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
+
+import { convertToBgImage } from "gbimage-bridge"
 import styled from "styled-components";
 import BentelerLogo from 
 "../../../images/benteler.svg";
@@ -18,10 +21,10 @@ import "./style.scss"
 
 const BGImageServices1 = styled(BackgroundImage)`
   top: 0px;
-
-  position: absolute!important;
+  opacity: .4!important;
+  position: sticky!important;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1;
   background-position: bottom center;
   background-repeat: repeat-y;
@@ -32,7 +35,7 @@ const Services = ()=>{
   const data_image =  useStaticQuery(
     graphql`
       query{
-	file(relativePath: { eq: "bg-services1.jpg" }) {
+        file(relativePath: { eq: "bg-services1.jpg" }) {
           childImageSharp {
             fluid {
               base64
@@ -42,16 +45,24 @@ const Services = ()=>{
             srcWebp
             srcSetWebp
             sizes
-            }
+            },
+            gatsbyImageData(
+              width: 200
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
       	}
       }
     `
   );
+  const image = getImage(data_image);
+  const bgImage =  convertToBgImage(image);
 
   const imageDataServ = data_image.file.childImageSharp.fluid;
   return (
     <section className="pb-5 cont-services">
+     <BGImageServices1 Tag="div" id="contBgServices" fluid={imageDataServ} />
         <div className="pt-5 ps-5 pe-5 position-relative 
          wrapper-services">
           <h2 className="title p-5">Servicios</h2>
