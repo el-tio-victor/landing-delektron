@@ -21,7 +21,7 @@ import "./style.scss"
 
 const BGImageServices1 = styled(BackgroundImage)`
   top: 0px;
-  opacity: .4!important;
+  opacity: .67!important;
   position: sticky!important;
   width: 100%;
   height: 100vh;
@@ -61,20 +61,34 @@ const Services = ()=>{
 
   const imageDataServ = data_image.file.childImageSharp.fluid;
   return (
-    <section className="pb-5 cont-services">
+    <section className=" cont-services">
      <BGImageServices1 Tag="div" id="contBgServices" fluid={imageDataServ} />
         <div className="pt-5 ps-5 pe-5 position-relative 
          wrapper-services">
-          <h2 className="title p-5">Servicios</h2>
-          <p className="col-11 col-md-8 m-auto mb-5  ">
+        <h2   
+           data-sal="slide-up"
+            data-sal-delay="300"
+        data-sal-easing="ease"
+        className="title p-5">
+          <span className="title-text">SERVICIOS</span></h2>
+        <p  
+           data-sal="slide-up"
+            data-sal-delay="300"
+          data-sal-easing="ease"
+          className="col-11 col-md-8 m-auto pb-4 pt-4 mt-5  mb-5  ">
             Nuestro compromiso y experiencia nos permiten brindarle
             las siguientes soluciones enfocadas a mantener el correcto
             funcionamiento de sus equipos electrónicos y con ello
             sus procesos.
           </p>
-          <Container className="mb-5 all-services">
-            <div className="d-flex all-service-wrapper">
-              <div className=" col-4 p-4 all-service-item">
+          <Container 
+          className="mb-5  text-center all-services">
+            <div className="d-flex flex-wrap-no-wrap all-service-wrapper">
+              <div 
+              data-sal="slide-right"
+              data-sal-delay="200"
+              data-sal-easing="ease"
+              className=" col-4 p-4 all-service-item">
                 <h5 className="item-service-title">
                   Mantenimiento preventivo y correctivo
                 </h5>
@@ -87,7 +101,11 @@ const Services = ()=>{
                   </p>
                 </div>
               </div>
-              <div className=" col-4 p-4 all-service-item">
+              <div 
+                data-sal="slide-right"
+                data-sal-delay="400"
+                data-sal-easing="ease"
+              className=" col-4 p-4 all-service-item">
                 <h5 className="item-service-title">
                   Asistencia técnica en planta
                 </h5>
@@ -99,7 +117,11 @@ const Services = ()=>{
                   </p>
                 </div>
               </div>
-              <div className=" col-4 p-4 all-service-item">
+              <div 
+                data-sal="slide-right"
+                data-sal-delay="600"
+                data-sal-easing="ease"
+              className=" col-4 p-4 all-service-item">
                 <h5 className="item-service-title">
                   Proyectos de automatización
                 </h5>
@@ -118,11 +140,11 @@ const Services = ()=>{
           <CatalogoEquipos/>
         </Container>
       </div>
-      <div className=" m-auto">
+      <div className="clientes m-auto">
         <Container>
-        <p>Gracias a nuestros clientes por su confianza...</p>
+        <p className="text-white">Gracias a nuestros clientes por su confianza...</p>
         </Container>
-        <div className="d-flex justify-content-around wrapper-clientes">
+        <div className=" pb-4 pt-5 d-flex justify-content-around wrapper-clientes">
           <BentelerLogo/>
           <MondelezLogo/>
           <MotzoLogo/>

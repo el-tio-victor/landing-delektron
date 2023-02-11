@@ -1,3 +1,6 @@
+$color_point1: #79bdda;
+$color_point2: #528ab5;
+$color_point3: #3f5f95;
 .anim-out{
   animation: efect-out  .6s forwards ease-in-out;
   /*transform: translateY(-220px);*/
@@ -37,6 +40,21 @@
 .symbols{
   animation: floating 3s infinite ease-out;
 }
+.point{
+  animation: bounce 1s ease infinite;
+  &.uno{
+    animation-delay: 0s;
+    fill: $color_point1 !important;
+  }
+  &.dos{
+    animation-delay: .1s;
+    fill: $color_point2;
+  }
+  &.tres{
+    animation-delay: .2s;
+    fill: $color_point3;
+  }
+}
 @keyframes anim{
   98%{
     opacity:.5;
@@ -52,4 +70,16 @@
   from{ opacity: .3; }
   65%{ opacity: .6; }
   to{ opacity: .1; }
+}
+
+@keyframes bounce{
+  0%,100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+    fill:#fff!important;
+    transform: translateY(-10px);
+  }
 }

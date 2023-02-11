@@ -6,13 +6,13 @@ import BackgroundImage from "gatsby-background-image";
 import styled from "styled-components";
 
 import Weave from "../../../images/weave-intro.svg";
+import IconFace from "../../../images/facebook.svg";
 
 import "./style.scss";
 
 const StyledBackgroundImage = styled(BackgroundImage)`
   top: 40px;
   opacity: 0 !important;
-
   position: absolute !important;
   width: 100%;
   height: 100%;
@@ -30,7 +30,7 @@ const HeaderPage = () => {
       query {
         file(relativePath: { eq: "driveheader.jpg" }) {
           childImageSharp {
-            fluid {
+            fluid(quality:100,maxWidth:1920){
               base64
               aspectRatio
               src
@@ -91,12 +91,28 @@ const HeaderPage = () => {
     >
       <StyledBackgroundImage Tag="div" id="bg-header-intro" fluid={imageData} />
       <div className="col-12 mb-3 wrapper-intro">
-        <Row className="m-3 m-md-5 justify-content-start row-intro">
+        <div className="m-1 m-sm-3 m-md-5 d-flex flex-column  flex-sm-row
+        align-items-center justify-content-start row-intro">
+          <div className="p-2 row-intro-wrapper">
           <h1 className="text-center">DELEKTRON</h1>
           <h5 className="text-white text-center">
             Mantenimiento y reparación equipo electrónico industrial
           </h5>
-        </Row>
+          <footer 
+          className="text-white d-flex flex-column
+            justify-content-center align-items-center ">
+            <small>administracion@delektron.com</small>
+            <small>servicio@delektron.com</small>
+          </footer>
+          </div>
+          <span className="pt-0 ps-sm-3 pt-sm-0">
+            <a 
+             href="https://www.facebook.com/profile.php?id=100089116303876&mibextid=ZbWKwL"
+            target="_blank">
+              <IconFace/>
+            </a>
+          </span>
+        </div>
         <Weave/>
       </div>
     </section>
