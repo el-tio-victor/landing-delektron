@@ -14,52 +14,33 @@ import "./style.scss";
 const container_intro ={
   position: "relative",
   backgroundColor: "#3a86ff",
+  background: "rgb(255,255,255)",
+  background: "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(102,180,213,1) 39%, rgba(52,72,131,1) 100%)",
   height: "100vh",
   overflow: 'hidden',
+}
+
+function  disableScroll(){
+  window.scrollTo(0,0);
 }
 
 let SnapJs = () => {
   const Container_intro = useRef(null);
   useEffect(()=>{
+    console.log('use efect')
 
 
   var s = Snap("#path_top");
   var s_b = Snap("#path_bottom");
   let letra_d = Snap('#letra_d');
-  let group_electronica_industrial = Snap('#group_electronica_industrial');
   let matrix_d = new Snap.matrix(); 
   matrix_d.translate(-32,0);
-  console.log('container ',group_electronica_industrial);
 
   let svg_wave = Snap("#wave");
   let path_wave = svg_wave.select('path');
 
-  let group_delektron = Snap('.group-delektron');
-  let letras = group_delektron.selectAll('.letras');
 
-    let anim_letras = (letras, index)=>{
-      if(letras[index]){
-
-      let sn = Snap(letras[index].node);
-        //console.log(sn);
-
-        sn.animate(
-          {
-            transform:matrix_d,
-            'fill': '#004a96'
-          },
-          150,
-          ()=>{
-            group_electronica_industrial.node.classList.add('group-show')
-            anim_letras(letras,index+1)
-          }
-        )
-      }else{
-        s.animate(
-        {'d': path_top,'fill':'#ccc'},
-          600,
-          (n)=>{return Math.pow(n, .48)},
-          ()=>{
+    let anim_letras = ()=>{
             setTimeout(function(){
 
               path_wave.animate(
@@ -75,39 +56,20 @@ let SnapJs = () => {
                 }
             );
             Container_intro.current
-                .classList.add('anim-out');
+            .classList.add('anim-out');
+              /*document.getElementsByTagName("body")[0]
+                .style.overflowY ="scroll";
+            document.getElementsByTagName("html")[0]
+                .style.overflowY ="scroll";*/
+              //window.onscroll = null;
             },2000)
-          }
-        );
-      }
-      //}
     }
 
-  s.attr({
-    "fill":"#000"
-  })
   setTimeout(function(){
-   
-      s_b.animate(
-        {'d': path_bottom,'fill':'#004a96'},
-        700,
-        (n)=>{return Math.pow(n, .48)},
-        ()=>{
-          letra_d.animate(
-            {transform:matrix_d,
-              'fill':'#004a96'},250,
-            ()=>{
-              anim_letras(
-                letras,0
-              );
-            }
-          );
-        },
-      )
+    anim_letras(  ) 
     
    },2000);
    
-    //console.log('snap',path_length); 
   })
   return (
     <div ref={Container_intro} 

@@ -41,9 +41,13 @@ const catalogo =[
     description:""
   },
 ];
-const items = catalogo.map((item)=>
-  <div>
-    <h4 className="grid-service-item-title">
+const items = catalogo.map((item,index)=>
+  <div key={index}
+    data-sal="slide-right"
+  data-sal-delay={(index+1)%2 == 0 ? 500 : 600}
+    data-sal-easing="ease"
+  >
+    <h4 className="text-center grid-service-item-title">
       {item.title}
     </h4>
   </div>
@@ -51,17 +55,17 @@ const items = catalogo.map((item)=>
 const CatalogoEquipos = ()=>{
   return(
     <div className="pt-5">
-      <p>
-        Algo de nuestro expertise incluye pero no se limita a los siguientes equipos...
+      <p className="mt-4 pb-5 mb-5">
+        Algo de nuestro catalogo de servicios...
       </p>
       <div className="grid-services">
         {items}
       </div>
-      <div className="footer-services mt-5">
-        <h4 className="grid-service-item-title">
+      <div className="footer-services pt-5  mt-5">
+        <h4 className="pt-5 grid-service-item-title">
           Otros...
         </h4>
-        <div className="wrapper-items-otros d-flex">
+        <div className="p-4 wrapper-items-otros d-flex">
           <h5 className="item-otros"> Balastros electrónicos</h5>
           <h5 className="item-otros">Equipo para instrumentación</h5>
           <h5 className="item-otros">Control de puertas</h5>
@@ -69,11 +73,15 @@ const CatalogoEquipos = ()=>{
           <h5 className="item-otros">Displays</h5>
         </div>
       </div>
-      <p className="pt-5 pb-5">Y mas... 
-        <br />
-        Ademas contamos con un amplio stock en refacciones y proveedores
-        nacionales e internacionales para poder brindarle una respuesta en menor tiempo.
-      </p>
+      <div className="mb-5 mt-5 pt-5 pb-5 col-10  extras">
+        <h3 className="title"><span className="title-txt">Y mas...</span> </h3>
+        <p className="   ps-4 me-4">
+          <br />
+          Ademas contamos con un amplio stock en refacciones y proveedores
+          nacionales e internacionales para poder brindarle una respuesta en 
+          menor tiempo.
+        </p>
+      </div>
     </div>
 
   );

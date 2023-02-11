@@ -1,0 +1,106 @@
+@mixin areas($var1,$var2) {
+ grid-template-areas: $var1
+ $var2; 
+}
+.component{
+  transition: all 1.5s ease;
+}
+/*.title2,.title{
+  font-size: 5rem;
+  font-weight: 700;
+}
+.title{
+  width: 30px;
+  word-wrap: break-word;
+  line-height: 70px;
+}
+.title2{
+  letter-spacing: 15px;
+}*/
+  .patern-components{
+    opacity: 0.1;
+    position: absolute;
+    z-index:1;
+
+    .component-1{
+	    animation: float 6s ease-in-out infinite;
+    }
+  }
+.cont-about{
+  z-index: 2;
+  min-height: 1140px;
+  padding-bottom: 7rem;
+  overflow: hidden;
+
+  .body-about,header{
+    position: relative;
+    z-index: 2;
+  }
+  .container-about-wrapper{
+    border: 9px solid #42679b;
+    padding: 25px;
+  }
+  .cont-about-wrapper{
+    margin-bottom: 4rem ;
+    display: grid;
+    grid-template-columns: 550px 1fr ;
+    grid-template-rows: 650px 120px;
+
+    @include areas("imagen texto","gracias gracias");
+    .grid-area-imagen{
+      grid-area: imagen;
+    }
+    .grid-area-texto{
+      grid-area: texto;
+    }
+    .grid-area-gracias{
+      grid-area: gracias;
+    }
+  }
+}
+.container-text-about{
+  margin-bottom: 3rem;
+}
+.body-about p{
+  font-size: 1.234rem;
+}
+.thanks{
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px #3a86ff;
+  z-index: 4;
+}
+.cont-banner{
+  min-height: 670px;
+  background-color: #ccc;
+}
+.banner-about{
+  position: absolute;
+  left: 70px;
+  top: 20px;
+  background-color: #3a86ff;
+  width: 420px;
+  height: 490px;
+  z-index: 3;
+}
+.text-compromise{
+  padding-top: 10rem;
+  width: 380px;
+  color: #3a86ff;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		margin-top: 0;
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		margin-top: 10px;
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		margin-top: 0px;
+	}
+}

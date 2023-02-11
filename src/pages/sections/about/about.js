@@ -1,45 +1,56 @@
-import * as React from "react";
+import React,{ useState, useEffect, useRef } from "react";
 import Container from "react-bootstrap/Container";
-import "./style.css";
-
+import {StaticImage} from "gatsby-plugin-image";
+import "./style.scss";
+import BGcomponents from "../../../images/patern_components.svg";
 
 const About = ()=> {
-  return(
+   return(
     <div>
       <section id="about" className="position-relative
-      pt-5 bg-white pb-5 cont-about">
-        <header className="ps-3 pt-5  ">
+      pt-5 bg-white  cont-about">
+        <BGcomponents  className="patern-components"/>
+        <header className="mt-5 container ps-3 pt-5  ">
         <h2 className="mt-3 title">
-          NUESTRA 
+          <span className="title-text">NUESTRA EMPRESA</span>
         </h2>
-        <h2 className="ps-3 title2">EMPRESA</h2>
         </header>
-        <div className=" body-about pt-5 pb-5">
-          <Container className="col-12 col-md-9 container-text-about">
+        <div className="position-relative body-about pt-5 pb-5">
+          <Container className="pb-5 col-12 col-md-9 container-text-about">
           <p>
             Somos un equipo de profesionales electrónicos con base en la ciudad 
             de puebla y servicio a todo mexico,  
             comprometidos con el mantenimiento y 
             la reparación de diversos tipos de equipo electrónico 
-            industrial, mantenimiento preventivo y correctivo, ademas de servicios de asistencia técnica y proyectos 
+            industrial, mantenimiento preventivo y correctivo, 
+            ademas de servicios de asistencia técnica y proyectos 
             de automatización. 
           </p>
           </Container>
-          <Container className="position-relative">
-            <div className="banner-about">
-            </div>
-            <div className="d-flex justify-content-end">
-              <p className="pe-5 col-6 text-compromise">
-               Nuestro compromiso es con cada uno de nuestros 
-                clientes para brindar la mayor calidad en los
-                servicio brindados a sus equipos.
-              </p>
+          <Container className="container-about-wrapper">
+            <div className="cont-about-wrapper">
+              <div className="grid-area-imagen">
+                <StaticImage 
+                  src="../../../images/about.jpg"
+                  alt="a lol"
+                />
+              </div>
+              <div className="d-flex justify-content-center align-items-center 
+                grid-area-texto">
+                <p className="pe-5 col-6 text-compromise">
+                  Nuestro compromiso es con cada uno de nuestros 
+                  clientes para brindar la mayor calidad en los
+                  servicio aplicado a sus equipos.
+                </p>
+              </div>
+              <div className="grid-area-gracias">
+                <h5 className="position-relative text-center thanks">
+                  A cada uno de ellos gracias por su confianza
+                </h5>
+              </div>
             </div>
           </Container>
         </div>
-        <h5 className="position-relative text-center thanks">
-            A cada uno de ellos gracias por su confianza
-        </h5>
       </section>
     </div>
   );
