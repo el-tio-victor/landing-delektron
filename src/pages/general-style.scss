@@ -1,3 +1,6 @@
+@import 'bootstrap/scss/_functions.scss';
+@import 'bootstrap/scss/_variables.scss';
+@import "bootstrap/scss/_mixins.scss";
 // Example usage
 @mixin gradientText($color1, $color2, $dir) {
     background: linear-gradient($color1, $color2, $dir);
@@ -25,7 +28,7 @@ p{
   font-family: "Dosis"!important;
   font:caption;
   text-shadow: 5px 5px 0 rgba(102,180,213,.35);
-  font-size: 5.78vw;
+  font-size: 13vw;
   font-weight: 900;
   .title-text{
     /*font: caption;
@@ -34,3 +37,10 @@ p{
   }
 }
 
+
+@include media-breakpoint-up(md){
+  .title,.title2{
+    font-size: 6vw;
+  }
+
+}

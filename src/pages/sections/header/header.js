@@ -44,6 +44,7 @@ const HeaderPage = () => {
       }
     `
   );
+ 
   const [y, setY] = useState();
 
   const imageData = data.file.childImageSharp.fluid;
@@ -78,7 +79,6 @@ const HeaderPage = () => {
     });
   });
   observable.observe(document.body);
-
   return (
     <section
       id="intro"
@@ -105,7 +105,7 @@ const HeaderPage = () => {
             <small>servicio@delektron.com</small>
           </footer>
           </div>
-          <span className="pt-0 ps-sm-3 pt-sm-0">
+          <span className="pt-3 ps-sm-3 pt-sm-0">
             <a 
              href="https://www.facebook.com/profile.php?id=100089116303876&mibextid=ZbWKwL"
             target="_blank">

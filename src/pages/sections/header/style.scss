@@ -1,3 +1,6 @@
+@import 'bootstrap/scss/_functions.scss';
+@import 'bootstrap/scss/_variables.scss';
+@import "bootstrap/scss/_mixins.scss";
 h1{
   font-weight: 700;
   color: #ccc;
@@ -43,19 +46,20 @@ h1{
 }
 .row-intro{
   width: 310px;
-  margin-bottom: 80px!important;
+  margin-bottom: 100px!important;
   position: relative;
   z-index: 5;
   .row-intro-wrapper{
     border-bottom: solid 4px white;
   }
 }
-@includemedia-break-point-up(sm){
+@include media-breakpoint-up(sm){
   .row-intro{
     width: 350px;
-    margin-bottom: 250px!important;
+    margin-bottom: 150px!important;
     .row-intro-wrapper{
       border-right: solid 4px white;
+      border-bottom: none;
     }
   }
 }

@@ -61,15 +61,15 @@ const Services = ()=>{
 
   const imageDataServ = data_image.file.childImageSharp.fluid;
   return (
-    <section className=" cont-services">
+    <section id="servicios" className=" cont-services">
      <BGImageServices1 Tag="div" id="contBgServices" fluid={imageDataServ} />
-        <div className="pt-5 ps-5 pe-5 position-relative 
+        <div className="pt-5 ps-3 ps-sm-1 pe-3 pe-sm-1 ps-lg-5 pe-lg-5 position-relative 
          wrapper-services">
         <h2   
            data-sal="slide-up"
-            data-sal-delay="300"
-        data-sal-easing="ease"
-        className="title p-5">
+            data-sal-delay="100"
+            data-sal-easing="ease"
+        className="title ps-0 p-5">
           <span className="title-text">SERVICIOS</span></h2>
         <p  
            data-sal="slide-up"
@@ -82,13 +82,13 @@ const Services = ()=>{
             sus procesos.
           </p>
           <Container 
-          className="mb-5  text-center all-services">
-            <div className="d-flex flex-wrap-no-wrap all-service-wrapper">
+          className="mb-0 mb-md-5 ms-auto me-auto text-center all-services">
+            <div className="d-flex flex-column flex-lg-row flex-wrap-no-wrap all-service-wrapper">
               <div 
               data-sal="slide-right"
-              data-sal-delay="200"
+            
               data-sal-easing="ease"
-              className=" col-4 p-4 all-service-item">
+              className=" col-lg-4 ps-4 pe-4 all-service-item">
                 <h5 className="item-service-title">
                   Mantenimiento preventivo y correctivo
                 </h5>
@@ -103,9 +103,9 @@ const Services = ()=>{
               </div>
               <div 
                 data-sal="slide-right"
-                data-sal-delay="400"
+                data-sal-delay="50"
                 data-sal-easing="ease"
-              className=" col-4 p-4 all-service-item">
+              className=" col-md-lg-4 ps-4 pe-4 all-service-item">
                 <h5 className="item-service-title">
                   Asistencia técnica en planta
                 </h5>
@@ -119,9 +119,9 @@ const Services = ()=>{
               </div>
               <div 
                 data-sal="slide-right"
-                data-sal-delay="600"
+                data-sal-delay="50"
                 data-sal-easing="ease"
-              className=" col-4 p-4 all-service-item">
+              className=" col-lg-4 ps-4 pe-4 all-service-item">
                 <h5 className="item-service-title">
                   Proyectos de automatización
                 </h5>
@@ -134,17 +134,18 @@ const Services = ()=>{
               </div>
             </div>
           </Container>
-        <Container className="
+        <div className="
         wrapper-catalogo-equipos "
         >
           <CatalogoEquipos/>
-        </Container>
+        </div>
       </div>
       <div className="clientes m-auto">
         <Container>
         <p className="text-white">Gracias a nuestros clientes por su confianza...</p>
         </Container>
-        <div className=" pb-4 pt-5 d-flex justify-content-around wrapper-clientes">
+        <div className=" pb-4 pt-5 d-flex flex-column flex-md-row 
+          justify-content-around align-items-center wrapper-clientes">
           <BentelerLogo/>
           <MondelezLogo/>
           <MotzoLogo/>

@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/_functions.scss';
+@import 'bootstrap/scss/_variables.scss';
+@import "bootstrap/scss/_mixins.scss";
+
 .cont-services{
   color: #4d4949;
   position: relative;
@@ -8,10 +12,12 @@
     z-index: 2;
   }
   .all-services{
-    padding: 10rem 0 4rem 0;
+    padding: 5rem 0 0 0;
   }
   .all-service-item{
     position: relative;
+    padding-top: 5rem;
+    padding-bottom: 9rem;
     &::before{
       content: "";
       position: absolute;
@@ -40,31 +46,71 @@
 
 .grid-services{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 44px;
+  grid-template-columns: repeat(1,1fr);
+  align-items: center;
+  grid-gap: 10px ;
+  justify-items: center;
 }
 .grid-services  >  div{
   display: flex; 
   justify-content: center;
   align-items: center;
+  width: 290px;
+  padding: 0 25px;
   min-height: 250px;
   background:  rgb(72, 115, 164);
   .grid-service-item-title{
-    font-size: 3rem;
-    color: rgb(244 247 255);
+    font-size: 2rem;
+    color: rgb(244 ,247, 255);
     font-family: "Dosis";
     font-weight: 600;}
     
   }
 
-/*.grid-services div:nth-child(2n){
-  transform: translate(5px, 33px);
-}*/
+@include media-breakpoint-up(md){
+  .grid-services{
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+  }
+
+  .grid-services  >  div{
+    width: 360px;
+    .grid-service-item-title{
+      font-size: 2.7rem;
+    }
+    
+    }
+  
+  .cont-services{
+    .all-service-item{
+      padding-bottom: 4rem;
+    }
+  }
+  }
+  
+@include media-breakpoint-up(sm){
+  .cont-services{
+    .all-services{
+      padding: 10rem 0 4rem 0;
+    }
+  }
+
+.grid-services{
+  grid-gap: 55px;
+  
+}
+.grid-services  >  div{
+  width: 350px;
+}
+}
+@include media-breakpoint-up(lg){
+  .grid-services{
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 44px;
+  }
+}
 
 .all-service-wrapper{
-  & >.all-service-item:nth-child(2){
-    height: 320px;
-  }
 }
 .item-otros{
   font-size: 1.78rem;

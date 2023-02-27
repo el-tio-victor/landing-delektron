@@ -8,7 +8,7 @@ import {
   path_top, 
   path_bottom,
   path_wave_down,
-} from "./paths.js"
+} from "../../../resources/paths"
 import "./style.scss";
 
 const container_intro ={

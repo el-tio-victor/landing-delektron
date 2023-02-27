@@ -44,18 +44,20 @@ const catalogo =[
 const items = catalogo.map((item,index)=>
   <div key={index}
     data-sal="slide-right"
-  data-sal-delay={(index+1)%2 == 0 ? 500 : 600}
+    data-sal-delay={(index+1)%2 == 0 ? 500 : 600}
     data-sal-easing="ease"
   >
+    <div>
     <h4 className="text-center grid-service-item-title">
       {item.title}
     </h4>
+    </div>
   </div>
 );
 const CatalogoEquipos = ()=>{
   return(
-    <div className="pt-5">
-      <p className="mt-4 pb-5 mb-5">
+    <div className="">
+      <p className="mt-2 ps-4 ps-lg-0 pb-5 mb-5">
         Algo de nuestro catalogo de servicios...
       </p>
       <div className="grid-services">
@@ -65,15 +67,15 @@ const CatalogoEquipos = ()=>{
         <h4 className="pt-5 grid-service-item-title">
           Otros...
         </h4>
-        <div className="p-4 wrapper-items-otros d-flex">
-          <h5 className="item-otros"> Balastros electrónicos</h5>
-          <h5 className="item-otros">Equipo para instrumentación</h5>
-          <h5 className="item-otros">Control de puertas</h5>
-          <h5 className="item-otros">Taladros Industriales</h5>
-          <h5 className="item-otros">Displays</h5>
+        <div className="p-4 wrapper-items-otros d-flex flex-column flex-lg-row">
+          <h5 className="mb-4 item-otros"> Balastros electrónicos</h5>
+          <h5 className="mb-4 item-otros">Equipo para instrumentación</h5>
+          <h5 className="mb-4 item-otros">Control de puertas</h5>
+          <h5 className="mb-4 item-otros">Taladros Industriales</h5>
+          <h5 className=" item-otros">Displays</h5>
         </div>
       </div>
-      <div className="mb-5 mt-5 pt-5 pb-5 col-10  extras">
+      <div className="mb-0 mb-md-3 mt-5 pt-5 pb-5 col-12 col-md-10  extras">
         <h3 className="title"><span className="title-txt">Y mas...</span> </h3>
         <p className="   ps-4 me-4">
           <br />

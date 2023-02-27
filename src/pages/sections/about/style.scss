@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/_functions.scss';
+@import 'bootstrap/scss/_variables.scss';
+@import "bootstrap/scss/_mixins.scss";
+
 @mixin areas($var1,$var2) {
  grid-template-areas: $var1
  $var2; 
@@ -37,14 +41,14 @@
     z-index: 2;
   }
   .container-about-wrapper{
-    border: 9px solid #42679b;
-    padding: 25px;
+    border: 9px solid transparent;
+    padding: 5px;
   }
   .cont-about-wrapper{
     margin-bottom: 4rem ;
     display: grid;
-    grid-template-columns: 550px 1fr ;
-    grid-template-rows: 650px 120px;
+    grid-template-columns: 100% 0 ;
+    grid-template-rows: 450px 120px;
 
     @include areas("imagen texto","gracias gracias");
     .grid-area-imagen{
@@ -56,8 +60,53 @@
     .grid-area-gracias{
       grid-area: gracias;
     }
+    .text-compromise{
+      color: #3a86ff;
+      margin-left: -150px;
+      margin-top: 280px;
+      position: relative;
+      font-size: .9rem;
+      background: white;
+      padding: .3rem;
+      width: 200px;
+    }
   }
 }
+
+@include media-breakpoint-up(sm){
+  .container-about-wrapper{
+    border: 9px solid #42679b;
+    padding: 25px;
+  }
+  .cont-about-wrapper{
+    grid-template-columns: 280px 1fr ;
+  }
+}
+@include media-breakpoint-up(md){
+  .wrapper-img-about{
+    width: 450px;
+  }
+
+}
+
+@include media-breakpoint-up(lg){
+  .container-about-wrapper{
+    .cont-about-wrapper{
+      grid-template-columns: 580px 1fr ;
+      grid-template-rows: 650px 120px;
+    }
+    .text-compromise{
+      width: 90%!important;
+      padding-top: 10rem;
+      margin-left: 0!important;
+      font-size: 1.25rem!important;
+    }
+    .wrapper-img-about{
+      width: 100%;
+    }
+  }
+}
+
 .container-text-about{
   margin-bottom: 3rem;
 }
@@ -83,11 +132,6 @@
   width: 420px;
   height: 490px;
   z-index: 3;
-}
-.text-compromise{
-  padding-top: 10rem;
-  width: 380px;
-  color: #3a86ff;
 }
 
 @keyframes float {

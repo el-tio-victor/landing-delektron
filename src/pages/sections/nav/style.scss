@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/_functions.scss';
+@import 'bootstrap/scss/_variables.scss';
+@import "bootstrap/scss/_mixins.scss";
+
 .header-mai{
   width: 100%;
   position: fixed;
@@ -18,5 +22,20 @@
   }
   .wrapper-header{
     border-bottom: 2px solid rgba(255,255,255,.1);
+  }
+  .links{
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(sm){
+
+}
+
+@include media-breakpoint-up(sm){
+  .header-mai{
+    .links{
+      display: flex;
+    }
   }
 }
